@@ -10,6 +10,16 @@
 #include <time.h>
 #include <semaphore.h>
 
+//
+sem_t *sem_oxQue,
+    *sem_hQue,
+    *mutex,
+    *sem_block,
+    *sem_bond,
+    *sem_print,
+    *sem_end,
+    *sem_created;
+
 typedef struct process_info
 {
     int n_oxygen;
@@ -18,17 +28,17 @@ typedef struct process_info
     int molecule_time;
 } process_info_t;
 
-typedef struct semaphore_data
-{
-    sem_t sem_oxQue;
-    sem_t sem_hQue;
-    sem_t mutex;
-    sem_t sem_block;
-    sem_t sem_bond;
-    sem_t sem_print;
-    sem_t sem_end;
-    sem_t sem_created;
-} semaphore_data_t;
+//typedef struct semaphore_data
+//{
+//    sem_t sem_oxQue;
+//    sem_t sem_hQue;
+//    sem_t mutex;
+//    sem_t sem_block;
+//    sem_t sem_bond;
+//    sem_t sem_print;
+//    sem_t sem_end;
+//    sem_t sem_created;
+//} semaphore_data_t;
 
 typedef struct shm_data
 {
